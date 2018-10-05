@@ -37,5 +37,5 @@ public:
 	}
 
 private:
-	CString m_currentKeyValue;  ///< запоминаем текущее значение ключа реестра, восстанавливаем в деструкторе
+	CString m_currentKeyValue;
 };
