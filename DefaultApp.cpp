@@ -1,3 +1,11 @@
+/// Application installed from Microsoft Store 
+BOOL IsAppXProgId(LPCTSTR progId)
+{
+	LPCTSTR appx = L"AppX";
+	const size_t len = _tcslen(appx);
+	return _tcslen(progId)>len && _tcsnicmp(progId, appx, len)==0;
+}
+
 /// Returns default browser file name
 void GetDefaultBrowserFileName(CString& strres)
 {
@@ -82,7 +90,7 @@ void GetDefaultBrowserFileName(CString& strres)
 		strres = strPath;
 }
 
-// default Mail client path
+/// default Mail client path
 void GetDefaultMailClientPath(CXString& strres)
 {
 	strres.Empty();
@@ -136,7 +144,8 @@ void GetDefaultMailClientPath(CXString& strres)
 	}
 }
 
-void GetMsOfficeFileName(CXString& strres)
+/// Ms Word FileName
+void GetMsWordFileName(CXString& strres)
 {
 	HKEY hKey;
 	LONG res = RegOpenKeyEx(HKEY_CLASSES_ROOT, _T("Word.Application\\CLSID"), 0, KEY_READ, &hKey);
@@ -177,10 +186,10 @@ void GetMsOfficeFileName(CXString& strres)
 						strPath = strPath.Left(nSlash-1);
   			}
 
-				RegCloseKey(hKey);
+			RegCloseKey(hKey);
         
-        if (!strPath.IsEmpty())
-          strres = strPath;        
+			if (!strPath.IsEmpty())
+			   strres = strPath;        
         
 			}
 		}
