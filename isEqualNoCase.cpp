@@ -1,4 +1,4 @@
-isEqualNoCase for std::tstring (std::wstring or std::string) with lambda
+//isEqualNoCase for std::tstring (std::wstring or std::string) with lambda
 
 namespace std
 {
