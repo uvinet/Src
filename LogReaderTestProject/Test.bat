@@ -1,1 +1,0 @@
-TestProject.exe TestProject\test_orders.log "order*closed"
