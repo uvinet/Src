@@ -32,9 +32,7 @@ int main()
 		std::vector<std::thread> threads_vector;
 	} ep;
 
-	std::thread([] {
-		printf("Eating...\npress any key to stop");
-		_getch();
-		st_bEat = false;
-	}).join();
+	printf("Eating...\npress any key to stop");
+	_getch();
+	st_bEat = false;
 }
