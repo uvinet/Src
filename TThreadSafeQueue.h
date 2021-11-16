@@ -41,4 +41,3 @@
 	private:
 		CCriticalSection cs_; 	///< объект синхронизации
 	};
-  
